@@ -22,7 +22,7 @@ def download_from(site):
     "Mozilla/5.0 (Linux; Android 11; Mi 9T Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36",
     "Mozilla/5.0 (iPhone; CPU iPhone OS 15_3 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Version/15.3 Mobile/15E148 Safari/537.36",
     "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/537.36"
-]
+    ]
 
     headers = {'User-Agent': random.choice(user_agents)}
     response = requests.get(site, headers=headers)      # response es la respuesta al enviar una solicitud HTTP.
@@ -46,6 +46,6 @@ def download_from(site):
         file.write(pic_response.content)
         print('Successfully downloaded')
 
-url = input('Insert URL: ')                             # Pide la URL.
-# url = 'https://www.imdb.com/title/tt5040012/mediaviewer/rm2594863105/'
+url = input('Insert URL: ')                                                 # Pide la URL.
+# url = 'https://www.imdb.com/title/tt5040012/mediaviewer/rm2594863105/'    # Ejemplo.
 download_from(url)
